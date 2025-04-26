@@ -13,9 +13,15 @@ export class OrbitDBService {
     try {
       console.log("Connecting to IPFS...");
       this.ipfs = create({
-        url: "http://18.130.48.44:5001", Address: {
-          API: '/ip4/18.130.48.44/tcp/5001',
-          Gateway: '/ip4/18.130.48.44/tcp/8080'
+        url: "http://3.86.110.183:5001", 
+        Address: {
+          API: '/ip4/3.86.110.183/tcp/5001',
+          Gateway: '/ip4/3.86.110.183/tcp/8080'
+        },
+        config: {
+          Pubsub: {
+            Enabled: true
+          }
         }
       });
 
